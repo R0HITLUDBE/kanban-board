@@ -35,17 +35,7 @@ const KanbanBoard = () => {
     { id: 4, name: "done", isInitial: false },
   ]);
   const [tasks, setTasks] = useState<any>({
-    todo: [
-      {
-        id: "23232",
-        title: "title 1",
-        description:
-          "acacvacv afafceafaf  fafafaf af aef af af af af afafasf a fae",
-        date: "June 2223, 2020",
-        state: "todo",
-        message: [],
-      },
-    ],
+    todo: [],
     blocked: [],
     "in progress": [],
     done: [],
@@ -80,10 +70,6 @@ const KanbanBoard = () => {
       [stage]: taskDataaa,
     }));
   };
-
-  useEffect(() => {
-    console.log(tasks);
-  }, [tasks]);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
